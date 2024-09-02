@@ -23,4 +23,4 @@ api.add_resource(User, '/user', '/user/<string:cpf>')
 api.add_resource(Users, '/users')
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, host="0.0.0.0")
