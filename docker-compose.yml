@@ -16,4 +16,5 @@ services:
     restart: always 
     depends_on:
       - mongodb 
-    
+    volumes:
+      - .:/app
