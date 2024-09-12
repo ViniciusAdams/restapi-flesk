@@ -6,6 +6,13 @@ app = Flask(__name__)
 api = Api(app)
 db = MongoEngine(app)
 
+
+app.config['MONGODB_SETTINGS'] = {
+    'db': 'project1',
+    'host': '192.168.1.35',
+    'port': 12345
+}
+
 class Users(Resource):
     def get(self):
         return {"message": "user 1"}
