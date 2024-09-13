@@ -8,9 +8,11 @@ db = MongoEngine(app)
 
 
 app.config['MONGODB_SETTINGS'] = {
-    'db': 'project1',
-    'host': '192.168.1.35',
-    'port': 12345
+    'db': 'users',
+    'host': 'mongodb',
+    'port': 27017,
+    'user': 'admin',
+    'password': 'admin'
 }
 
 class Users(Resource):
