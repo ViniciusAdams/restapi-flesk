@@ -15,6 +15,13 @@ app.config['MONGODB_SETTINGS'] = {
     'password': 'admin'
 }
 
+class UserModel(db.Document):
+    cpf =db.StringField(required=True, unique=True)
+    first_name = db.StringField(required=50)
+    last_name = db.StringField(required=50)
+    email = db.EmailField(required=True)
+    birth_date= db.DateTimeField(required=True)
+
 class Users(Resource):
     def get(self):
         return {"message": "user 1"}
